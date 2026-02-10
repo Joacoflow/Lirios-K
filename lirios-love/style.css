@@ -9,14 +9,14 @@ body {
       rgba(5, 10, 40, 0.3),
       rgba(5, 10, 40, 0.45)
     ),
-    url("img/fondo1.jpg.jpeg    ");
+    url("img/fondo1.jpg.jpeg");
 
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-
+/* 🌸 Flores */
 .flowers {
   position: fixed;
   top: 0;
@@ -35,15 +35,16 @@ body {
 
 .love-text {
   position: absolute;
-  top: 60px;
-  left: -15px;
-  font-size: 16px;
+  top: 65px;
+  left: -20px;
+  font-size: 22px; /* ⬅️ MÁS GRANDE */
   color: #ffd6eb;
   font-family: cursive;
-  text-shadow: 0 0 10px #ff7eb9;
+  text-shadow: 0 0 12px #ff7eb9;
   white-space: nowrap;
 }
 
+/* ✨ Animación */
 @keyframes floatUp {
   0% {
     opacity: 0;
@@ -54,22 +55,23 @@ body {
   }
   100% {
     opacity: 0;
-    transform: scale(1.2) translateY(-100px);
+    transform: scale(1.2) translateY(-120px);
   }
 }
+
 /* 💌 Carta */
 .letter {
   position: fixed;
   top: 50%;
   left: 30px;
   transform: translateY(-50%);
-  width: 320px;
-  max-width: 85vw;
+  width: 360px;
+  max-width: 90vw;
 
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(6px);
-  border-radius: 16px;
-  padding: 20px;
+  border-radius: 18px;
+  padding: 26px;
 
   font-family: 'Georgia', serif;
   color: #333;
@@ -83,28 +85,47 @@ body {
   margin-top: 0;
   text-align: center;
   color: #b03060;
+  font-size: 28px; /* ⬅️ MÁS GRANDE */
 }
 
 .letter p {
-  font-size: 14.5px;
-  line-height: 1.6;
-  margin-bottom: 10px;
+  font-size: 20px; /* ⬅️ CLAVE */
+  line-height: 1.8;
+  margin-bottom: 14px;
 }
 
 .signature {
   text-align: right;
   font-style: italic;
+  font-size: 20px;
   color: #b03060;
 }
 
-
+/* 📱 CELULAR */
 @media (max-width: 768px) {
   .letter {
     position: relative;
     top: auto;
     left: auto;
     transform: none;
-    margin: 20px auto;
-    width: 90%;
+    margin: 25px auto;
+    width: 92%;
+    padding: 28px;
+  }
+
+  .letter h2 {
+    font-size: 30px;
+  }
+
+  .letter p {
+    font-size: 22px; /* 🔥 PERFECTO EN CELULAR */
+  }
+
+  .signature {
+    font-size: 22px;
+  }
+
+  .love-text {
+    font-size: 24px;
   }
 }
