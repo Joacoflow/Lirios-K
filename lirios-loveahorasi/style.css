@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+
+  background-image:
+    linear-gradient(
+      rgba(5, 10, 40, 0.3),
+      rgba(5, 10, 40, 0.45)
+    ),
+    url("img/fondo1.jpg.jpeg");
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* 🌸 Flores */
+.flowers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flower {
+  position: absolute;
+  font-size: 52px;
+  filter: drop-shadow(0 0 10px #ff9ecf);
+  animation: floatUp 3s ease-out forwards;
+}
+
+/* 💕 Mensajes */
+.love-text {
+  position: absolute;
+  top: 70px;
+  left: -25px;
+  font-size: 24px; /* PC */
+  color: #ffd6eb;
+  font-family: cursive;
+  text-shadow: 0 0 12px #ff7eb9;
+  white-space: nowrap;
+}
+
+/* ✨ Animación */
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(0);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2) translateY(-120px);
+  }
+}
+
+/* 💌 Carta */
+.letter {
+  position: fixed;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  width: 380px;
+  max-width: 92vw;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  padding: 28px;
+
+  font-family: 'Georgia', serif;
+  color: #333;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.letter h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #b03060;
+  font-size: 30px;
+}
+
+.letter p {
+  font-size: 20px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.signature {
+  text-align: right;
+  font-style: italic;
+  font-size: 20px;
+  color: #b03060;
+}
+
+/* 📱 MÓVIL */
+@media (max-width: 768px) {
+
+  /* CARTA */
+  .letter {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto;
+    width: 95%;
+    padding: 26px;
+  }
+
+  .letter h2 {
+    font-size: 26px;
+  }
+
+  .letter p {
+    font-size: 21px;
+    line-height: 1.9;
+  }
+
+  .signature {
+    font-size: 18px;
+  }
+
+  /* 💖 MENSAJES QUE SALEN AL TOCAR */
+  .love-text {
+    font-size: 30vw; /* 🔥 ESTO LOS HACE GRANDES DE VERDAD */
+  }
+}
